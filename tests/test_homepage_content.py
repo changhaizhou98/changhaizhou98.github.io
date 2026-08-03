@@ -177,6 +177,13 @@ class HomepageTest(unittest.TestCase):
         post_training = about.split('LLM Serving 与推理加速', 1)[0]
         self.assertNotIn('<strong>Changhai Zhou</strong> et al.', post_training)
 
+    def test_bslora_marks_first_two_authors_as_equal_contributors(self):
+        about = (ROOT / '_pages' / 'about.md').read_text()
+        self.assertIn(
+            'Yuhua Zhou*, Ruifeng Li*, <strong>Changhai Zhou</strong>, Fei Yang, Aimin Pan',
+            about,
+        )
+
     def test_deputy_is_not_listed_as_first_author(self):
         about = (ROOT / '_pages' / 'about.md').read_text()
         match = re.search(

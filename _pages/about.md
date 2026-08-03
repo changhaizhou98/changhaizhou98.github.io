@@ -265,7 +265,7 @@ redirect_from:
           <img class="publication-thumb" src="{{ '/images/papers/bslora-main.png' | relative_url }}" alt="Main figure for BSLoRA">
           <div class="publication-body">
             <h3>BSLoRA: Enhancing the Parameter Efficiency of LoRA with Intra-Layer and Inter-Layer Sharing</h3>
-            <p class="publication-authors">Yuhua Zhou, Ruifeng Li, <strong>Changhai Zhou</strong>, Fei Yang, Aimin Pan</p>
+            <p class="publication-authors">Yuhua Zhou*, Ruifeng Li*, <strong>Changhai Zhou</strong>, Fei Yang, Aimin Pan</p>
             <p class="pub-meta">ICML 2025 / CCF-A / 二作</p>
             <p>
               针对 LoRA 参数效率仍受层内/层间重复表达限制的问题，引入 intra-layer 与 inter-layer sharing 机制；在尽量保持适配能力的同时复用低秩参数，说明 adapter 本身也存在可压缩结构，为 LoRA 结构设计提供轻量改造方向。
