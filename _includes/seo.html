@@ -37,14 +37,38 @@
 <meta property="og:locale" content="en">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ seo_title }}">
+{% if site.author.name %}
+  <meta name="author" content="{{ site.author.name | escape_once }}">
+{% endif %}
 
 {% if seo_url %}
   <link rel="canonical" href="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
   <meta property="og:url" content="{{ page.url | prepend: seo_url | replace: "/index.html", "/" }}">
 {% endif %}
 
-{% if page.excerpt %}
+{% if seo_description %}
+  <meta name="description" content="{{ seo_description }}">
   <meta property="og:description" content="{{ seo_description }}">
+{% endif %}
+
+{% if page.url == '/' or page.permalink == '/' %}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": {{ site.author.name | jsonify }},
+    "url": {{ site.url | jsonify }},
+    "jobTitle": "PhD Candidate",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": {{ site.author.employer | jsonify }}
+    },
+    "sameAs": [
+      "https://github.com/{{ site.author.github }}",
+      {{ site.author.googlescholar | jsonify }}
+    ]
+  }
+  </script>
 {% endif %}
 
 {% if site.twitter.username %}

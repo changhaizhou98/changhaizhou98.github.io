@@ -16,6 +16,32 @@ class HomepageTest(unittest.TestCase):
         config = (ROOT / '_config.yml').read_text()
         self.assertIn('baseurl                  : ""', config)
 
+    def test_site_identity_is_searchable_by_name(self):
+        config = (ROOT / '_config.yml').read_text()
+        seo = (ROOT / '_includes' / 'seo.html').read_text()
+        self.assertIn('title                    : "Changhai Zhou"', config)
+        self.assertIn('Changhai Zhou is a PhD candidate at Fudan University', config)
+        self.assertIn('<meta name="description" content="{{ seo_description }}">', seo)
+        self.assertIn('"@type": "Person"', seo)
+        self.assertIn('"name": {{ site.author.name | jsonify }}', seo)
+
+    def test_site_links_do_not_force_new_tabs(self):
+        head = (ROOT / '_includes' / 'head.html').read_text()
+        self.assertNotIn('<base', head)
+        self.assertNotIn('target="_blank"', head)
+
+    def test_assets_resolve_from_nested_pages(self):
+        head = (ROOT / '_includes' / 'head.html').read_text()
+        scripts = (ROOT / '_includes' / 'scripts.html').read_text()
+        self.assertIn("{{ '/assets/css/main.css' | relative_url }}", head)
+        self.assertIn("{{ '/assets/js/main.min.js' | relative_url }}", scripts)
+        self.assertNotIn('href="assets/', head)
+        self.assertNotIn('src="assets/', scripts)
+
+    def test_unused_scholar_stats_request_is_disabled(self):
+        scripts = (ROOT / '_includes' / 'scripts.html').read_text()
+        self.assertNotIn('fetch_google_scholar_stats.html', scripts)
+
     def test_reference_style_sections_present(self):
         about = (ROOT / '_pages' / 'about.md').read_text()
         self.assertIn('id="about"', about)
