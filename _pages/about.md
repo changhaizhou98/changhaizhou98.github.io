@@ -121,6 +121,25 @@ redirect_from:
         </article>
 
         <article class="publication-item">
+          <img class="publication-thumb" src="{{ '/images/papers/macaron-v1-main.png' | relative_url }}" alt="Official Macaron-V1 benchmark across chat, agent, coding, and GenUI tasks">
+          <div class="publication-body">
+            <h3>Introducing Macaron-V1</h3>
+            <p class="publication-authors">MindLab</p>
+            <p class="pub-meta">Model Release / Core Contributor</p>
+            <p>
+              Macaron-V1 正式发布包含 748B Venti 与 35B Tall 两个变体，延续 Mixture-of-LoRA，以 L0 router 在
+              Chat、Agent、Coding、GenUI 四类专家间选择；Venti 基于 GLM-5.2，Tall 基于 Qwen3.6-35B-A3B，并通过
+              MinT + MindForge 对齐 production harness 下的工具使用、Coding 和 GenUI 工作流。
+            </p>
+            <p class="pub-buttons">
+              <a href="https://macaron.im/mindlab/research/introducing-macaron-v1" target="_blank" rel="noopener">Project</a>
+              <a href="https://huggingface.co/mindlab-research/Macaron-V1-Venti" target="_blank" rel="noopener">Venti</a>
+              <a href="https://huggingface.co/mindlab-research/Macaron-V1-Tall" target="_blank" rel="noopener">Tall</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="publication-item">
           <img class="publication-thumb" src="{{ '/images/papers/macaron-v1-preview-main.png' | relative_url }}" alt="Overview figure for Macaron-V1-Preview">
           <div class="publication-body">
             <h3>Macaron-V1-Preview: A 749B Personal Agent Model with Mixture of LoRA</h3>

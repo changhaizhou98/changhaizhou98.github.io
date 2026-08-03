@@ -160,6 +160,7 @@ class HomepageTest(unittest.TestCase):
         for title in [
             'On the Scaling of PEFT: Towards Million Personal Models of Trillion Parameters',
             'LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget',
+            'Introducing Macaron-V1',
             'Macaron-V1-Preview: A 749B Personal Agent Model with Mixture of LoRA',
             'MinT: Managed Infrastructure for Training and Serving Millions of LLMs',
             'Dynamic Operator Optimization for Efficient Multi-Tenant LoRA Model Serving',
@@ -180,14 +181,28 @@ class HomepageTest(unittest.TestCase):
 
     def test_publications_include_authors_and_highlight_me(self):
         about = (ROOT / '_pages' / 'about.md').read_text()
-        self.assertEqual(about.count('class="publication-authors"'), 17)
+        self.assertEqual(about.count('class="publication-authors"'), 18)
         self.assertGreaterEqual(about.count('<strong>Changhai Zhou</strong>'), 14)
 
     def test_mindlab_publications_use_lab_author(self):
         about = (ROOT / '_pages' / 'about.md').read_text()
-        self.assertEqual(about.count('<p class="publication-authors">MindLab</p>'), 3)
+        self.assertEqual(about.count('<p class="publication-authors">MindLab</p>'), 4)
         post_training = about.split('LLM Serving 与推理加速', 1)[0]
         self.assertNotIn('<strong>Changhai Zhou</strong> et al.', post_training)
+
+    def test_macaron_v1_and_preview_are_separate_release_entries(self):
+        about = (ROOT / '_pages' / 'about.md').read_text()
+        self.assertEqual(about.count('<h3>Introducing Macaron-V1</h3>'), 1)
+        self.assertEqual(
+            about.count('<h3>Macaron-V1-Preview: A 749B Personal Agent Model with Mixture of LoRA</h3>'),
+            1,
+        )
+        for url in [
+            'https://macaron.im/mindlab/research/introducing-macaron-v1',
+            'https://huggingface.co/mindlab-research/Macaron-V1-Venti',
+            'https://huggingface.co/mindlab-research/Macaron-V1-Tall',
+        ]:
+            self.assertIn(url, about)
 
     def test_bslora_marks_first_two_authors_as_equal_contributors(self):
         about = (ROOT / '_pages' / 'about.md').read_text()
@@ -258,6 +273,7 @@ class HomepageTest(unittest.TestCase):
             'dynamic-operator-optimization-main.png',
             'scaling-peft-main.png',
             'longstraw-main.png',
+            'macaron-v1-main.png',
             'mint-main.png',
             'macaron-v1-preview-main.png',
             'rankadaptor-main.png',
