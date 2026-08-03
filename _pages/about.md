@@ -88,12 +88,34 @@ redirect_from:
             <h3>On the Scaling of PEFT: Towards Million Personal Models of Trillion Parameters</h3>
             <p class="publication-authors">MindLab</p>
             <p class="pub-meta">Thesis / Core Contributor</p>
+            <p class="pub-rank">
+              <a href="https://huggingface.co/papers/2606.02437" target="_blank" rel="noopener">Ranked #2 on Hugging Face Daily Papers</a>
+            </p>
             <p>
               面向 post-training 从单模型训练走向共享基座 + 海量个人 adapter 的趋势，提出 PEFT 的 Scale Up /
               Scale Down / Scale Out 视角；结合 1T base、百万 adapter 管理与 LoRA RL 实践，将 adapter 定位为个性化模型的持久状态与训练服务接口。
             </p>
             <p class="pub-buttons">
               <a href="https://arxiv.org/abs/2606.02437" target="_blank" rel="noopener">arXiv</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="publication-item">
+          <img class="publication-thumb" src="{{ '/images/papers/longstraw-main.png' | relative_url }}" alt="LongStraw execution path">
+          <div class="publication-body">
+            <h3>LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget</h3>
+            <p class="publication-authors"><strong>Changhai Zhou</strong>, Kieran Liu, Yuhua Zhou, Qian Qiao, Jun Gao, Harry Zhang, Irvine Lu, Nolan Ho, Lucian Li, Andrew Lei, Cleon Cheng, Steven Chiang, Yihang Zeng, Di Zhang, Rio Yang, Kaijie Chen, Andrew Chen, Pony Ma, Weizhong Zhang, Cheng Jin</p>
+            <p class="pub-meta">Technical Report / 一作</p>
+            <p class="pub-rank">
+              <a href="https://huggingface.co/papers/2607.14952" target="_blank" rel="noopener">Ranked #1 on Hugging Face Daily Papers</a>
+            </p>
+            <p>
+              面向百万 token 长上下文 RL 后训练在固定 GPU 预算下的显存瓶颈，LongStraw 对共享 prompt 进行一次无梯度 prefill，仅保留后续 response 所需的模型状态，并逐条重放 response 与累积梯度；在 Qwen3.6-27B 和 GLM-5.2 上验证 2M token 级执行路径。
+            </p>
+            <p class="pub-buttons">
+              <a href="https://arxiv.org/abs/2607.14952" target="_blank" rel="noopener">arXiv</a>
+              <a href="https://arxiv.org/pdf/2607.14952" target="_blank" rel="noopener">PDF</a>
             </p>
           </div>
         </article>
@@ -122,6 +144,9 @@ redirect_from:
             <h3>MinT: Managed Infrastructure for Training and Serving Millions of LLMs</h3>
             <p class="publication-authors">MindLab</p>
             <p class="pub-meta">Technical Report / Core Contributor</p>
+            <p class="pub-rank">
+              <a href="https://huggingface.co/papers/2605.13779" target="_blank" rel="noopener">Ranked #1 on Hugging Face Daily Papers</a>
+            </p>
             <p>
               针对百万级 LoRA 从训练、版本、导出到上线的生命周期管理挑战，设计 shared-base + adapter revision 的托管基础设施；通过
               adapter-only handoff 与一致的训练/推理路径降低发版、回滚和服务成本。
@@ -357,7 +382,7 @@ redirect_from:
     <p>
       Feel free to reach out by <a href="mailto:{{ site.author.email }}">email</a>. You can also find my publication
       list on <a href="{{ site.author.googlescholar }}" target="_blank" rel="noopener">Google Scholar</a> and code on
-      <a href="https://github.com/manlenzzz" target="_blank" rel="noopener">GitHub</a>.
+      <a href="https://github.com/changhaizhou98" target="_blank" rel="noopener">GitHub</a>.
     </p>
   </section>
 </div>

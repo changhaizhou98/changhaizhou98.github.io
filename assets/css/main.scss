@@ -308,6 +308,51 @@ h1:before, .anchor:before {
     font-weight: 700;
 }
 
+.pub-rank {
+    margin: 0.5em 0 0.4em !important;
+}
+
+.pub-rank a {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45em;
+    min-height: 2em;
+    padding: 0.28em 0.65em 0.28em 0.45em;
+    border: 1px solid #e2a72d;
+    border-radius: 3px;
+    background: #fff8df;
+    color: #5c4000 !important;
+    font-size: 0.86em;
+    font-weight: 800;
+    line-height: 1.35;
+    text-decoration: none !important;
+}
+
+.pub-rank a::before {
+    display: inline-grid;
+    width: 1.7em;
+    height: 1.7em;
+    flex: 0 0 1.7em;
+    place-items: center;
+    border-radius: 50%;
+    background: #ffd65a;
+    color: #342700;
+    content: "HF";
+    font-size: 0.78em;
+    font-weight: 800;
+    letter-spacing: 0;
+}
+
+.pub-rank a:hover {
+    border-color: #c88808;
+    background: #ffefb9;
+}
+
+.pub-rank a:focus-visible {
+    outline: 2px solid #224b8d;
+    outline-offset: 2px;
+}
+
 .pub-buttons {
     display: flex;
     flex-wrap: wrap;

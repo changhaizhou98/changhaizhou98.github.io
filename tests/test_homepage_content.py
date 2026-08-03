@@ -16,6 +16,17 @@ class HomepageTest(unittest.TestCase):
         config = (ROOT / '_config.yml').read_text()
         self.assertIn('baseurl                  : ""', config)
 
+    def test_github_pages_identity_uses_current_username(self):
+        config = (ROOT / '_config.yml').read_text()
+        about = (ROOT / '_pages' / 'about.md').read_text()
+        readme = (ROOT / 'README.md').read_text()
+        self.assertIn('repository               : "changhaizhou98/changhaizhou98.github.io"', config)
+        self.assertIn('url                      : "https://changhaizhou98.github.io"', config)
+        self.assertIn('github           : "changhaizhou98"', config)
+        self.assertIn('https://github.com/changhaizhou98', about)
+        self.assertIn('https://changhaizhou98.github.io/', readme)
+        self.assertNotIn('manlenzzz', config + about + readme)
+
     def test_site_identity_is_searchable_by_name(self):
         config = (ROOT / '_config.yml').read_text()
         seo = (ROOT / '_includes' / 'seo.html').read_text()
@@ -148,6 +159,7 @@ class HomepageTest(unittest.TestCase):
 
         for title in [
             'On the Scaling of PEFT: Towards Million Personal Models of Trillion Parameters',
+            'LongStraw: Long-Context RL Beyond 2M Tokens under a Fixed GPU Budget',
             'Macaron-V1-Preview: A 749B Personal Agent Model with Mixture of LoRA',
             'MinT: Managed Infrastructure for Training and Serving Millions of LLMs',
             'Dynamic Operator Optimization for Efficient Multi-Tenant LoRA Model Serving',
@@ -168,8 +180,8 @@ class HomepageTest(unittest.TestCase):
 
     def test_publications_include_authors_and_highlight_me(self):
         about = (ROOT / '_pages' / 'about.md').read_text()
-        self.assertEqual(about.count('class="publication-authors"'), 16)
-        self.assertGreaterEqual(about.count('<strong>Changhai Zhou</strong>'), 13)
+        self.assertEqual(about.count('class="publication-authors"'), 17)
+        self.assertGreaterEqual(about.count('<strong>Changhai Zhou</strong>'), 14)
 
     def test_mindlab_publications_use_lab_author(self):
         about = (ROOT / '_pages' / 'about.md').read_text()
@@ -183,6 +195,31 @@ class HomepageTest(unittest.TestCase):
             'Yuhua Zhou*, Ruifeng Li*, <strong>Changhai Zhou</strong>, Fei Yang, Aimin Pan',
             about,
         )
+
+    def test_hugging_face_daily_paper_rankings_are_prominent_and_linked(self):
+        about = (ROOT / '_pages' / 'about.md').read_text()
+        expected_rankings = [
+            ('2606.02437', 'Ranked #2 on Hugging Face Daily Papers'),
+            ('2605.13779', 'Ranked #1 on Hugging Face Daily Papers'),
+            ('2607.14952', 'Ranked #1 on Hugging Face Daily Papers'),
+        ]
+        self.assertEqual(about.count('class="pub-rank"'), 3)
+        for paper_id, label in expected_rankings:
+            self.assertIn(
+                f'<a href="https://huggingface.co/papers/{paper_id}" target="_blank" rel="noopener">{label}</a>',
+                about,
+            )
+
+    def test_longstraw_entry_has_complete_authors_and_direct_pdf(self):
+        about = (ROOT / '_pages' / 'about.md').read_text()
+        expected_authors = (
+            '<strong>Changhai Zhou</strong>, Kieran Liu, Yuhua Zhou, Qian Qiao, Jun Gao, '
+            'Harry Zhang, Irvine Lu, Nolan Ho, Lucian Li, Andrew Lei, Cleon Cheng, Steven Chiang, '
+            'Yihang Zeng, Di Zhang, Rio Yang, Kaijie Chen, Andrew Chen, Pony Ma, Weizhong Zhang, Cheng Jin'
+        )
+        self.assertIn(expected_authors, about)
+        self.assertIn('<p class="pub-meta">Technical Report / 一作</p>', about)
+        self.assertIn('https://arxiv.org/pdf/2607.14952', about)
 
     def test_deputy_is_not_listed_as_first_author(self):
         about = (ROOT / '_pages' / 'about.md').read_text()
@@ -220,6 +257,7 @@ class HomepageTest(unittest.TestCase):
             'qpruner-main.png',
             'dynamic-operator-optimization-main.png',
             'scaling-peft-main.png',
+            'longstraw-main.png',
             'mint-main.png',
             'macaron-v1-preview-main.png',
             'rankadaptor-main.png',

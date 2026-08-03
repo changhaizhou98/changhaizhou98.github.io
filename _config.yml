@@ -1,8 +1,8 @@
 # Site Settings
 title                    : "Changhai Zhou"
 description              : "Changhai Zhou is a PhD candidate at Fudan University researching efficient LLMs, model compression, PEFT, adaptive inference, and LLM serving."
-repository               : "manlenzzz/manlenzzz.github.io"
-url                      : "https://manlenzzz.github.io"
+repository               : "changhaizhou98/changhaizhou98.github.io"
+url                      : "https://changhaizhou98.github.io"
 baseurl                  : ""
 google_scholar_stats_use_cdn : False
 
@@ -29,7 +29,7 @@ author:
   flickr           :
   facebook         :
   foursquare       :
-  github           : "manlenzzz"
+  github           : "changhaizhou98"
   google_plus      :
   keybase          :
   instagram        :
