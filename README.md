@@ -1,33 +1,28 @@
 # Changhai Zhou — Academic Homepage
 
-Source for [https://changhaizhou98.github.io/](https://changhaizhou98.github.io/).
+**[Visit the academic homepage](https://changhaizhou98.github.io/).**
 
-Built with Jekyll. The main entry point is `_pages/about.md` (served at `/`).
+GitHub Pages publishes this Jekyll site from the root of `main`.
+The homepage front matter forwards the former `/zhouchanghai/` URLs to `/`.
 
-## Main files
+## Editing the site
 
-- `_pages/about.md`: single-page bilingual homepage content
-- `_config.yml`: site metadata and author profile
-- `_data/navigation.yml`: homepage section anchors
-- `notes/`: research notes and public experiment writeups
-- `assets/css/main.scss`: homepage-specific visual styling
-- `_includes/head/custom.html`: language toggle behavior and head customizations
-
-## Publications
-
-The publication section is manually maintained in `_pages/about.md`.
-For the broader and most up-to-date list, please refer to the linked Google Scholar profile on the homepage.
+- Edit the homepage, news, and publication list in `_pages/about.md`.
+- Edit the profile and site metadata in `_config.yml` and navigation in `_data/navigation.yml`.
+- Keep publication figures in `images/papers/` and research notes with their figures and data in `notes/`.
+- Edit site styles in `assets/css/main.scss`.
 
 ## Local preview
 
-If Ruby, Bundler, and Jekyll are available locally, you can preview the site with:
+With Ruby and Bundler installed, run the following commands from the repository root.
 
 ```bash
+bundle install
 bundle exec jekyll serve
 ```
 
-A lightweight content sanity check is also available via:
+Run the content checks with Python.
 
 ```bash
-python -m unittest tests.test_homepage_content -v
+python3 -m unittest discover -v
 ```

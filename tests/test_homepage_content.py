@@ -9,8 +9,15 @@ ROOT = Path(__file__).resolve().parents[1]
 class HomepageTest(unittest.TestCase):
     def test_about_page_serves_root(self):
         about = (ROOT / '_pages' / 'about.md').read_text()
-        self.assertIn('permalink: /', about)
+        self.assertIn('\npermalink: /\n', about)
         self.assertIn('author_profile: true', about)
+        for alias in [
+            '/zhouchanghai/',
+            '/zhouchanghai/about/',
+            '/zhouchanghai/about.html',
+            '/zhouchanghai/homepage/',
+        ]:
+            self.assertIn(f'\n  - {alias}\n', about)
 
     def test_config_has_empty_baseurl(self):
         config = (ROOT / '_config.yml').read_text()
@@ -49,9 +56,10 @@ class HomepageTest(unittest.TestCase):
         self.assertNotIn('href="assets/', head)
         self.assertNotIn('src="assets/', scripts)
 
-    def test_unused_scholar_stats_request_is_disabled(self):
+    def test_scripts_have_no_unused_tracking_includes(self):
         scripts = (ROOT / '_includes' / 'scripts.html').read_text()
         self.assertNotIn('fetch_google_scholar_stats.html', scripts)
+        self.assertNotIn('analytics.html', scripts)
 
     def test_reference_style_sections_present(self):
         about = (ROOT / '_pages' / 'about.md').read_text()

@@ -4,13 +4,6 @@ description              : "Changhai Zhou is a PhD candidate at Fudan University
 repository               : "changhaizhou98/changhaizhou98.github.io"
 url                      : "https://changhaizhou98.github.io"
 baseurl                  : ""
-google_scholar_stats_use_cdn : False
-
-google_analytics_id      :
-
-google_site_verification :
-bing_site_verification   :
-baidu_site_verification  :
 
 author:
   name             : "Changhai Zhou"
@@ -18,42 +11,12 @@ author:
   bio              : "PhD Candidate at Fudan University | Efficient LLMs, Compression, and PEFT"
   location         : "Shanghai, China"
   employer         : "Fudan University"
-  pubmed           :
   googlescholar    : "https://scholar.google.com/citations?user=mM3rnV4AAAAJ&hl=zh-CN"
   email            : "chzhou25@m.fudan.edu.cn"
-  researchgate     :
-  uri              :
-  bitbucket        :
-  codepen          :
-  dribbble         :
-  flickr           :
-  facebook         :
-  foursquare       :
   github           : "changhaizhou98"
-  google_plus      :
-  keybase          :
-  instagram        :
-  impactstory      :
-  lastfm           :
-  linkedin         :
-  dblp             :
-  orcid            :
-  pinterest        :
-  soundcloud       :
-  stackoverflow    :
-  steam            :
-  tumblr           :
-  twitter          :
-  vine             :
-  weibo            :
-  xing             :
-  youtube          :
-  wikipedia        :
 
 include:
-  - .htaccess
   - _pages
-  - files
 exclude:
   - _site
   - .bundle
@@ -62,6 +25,7 @@ exclude:
   - vendor
   - node_modules
   - docs
+  - tests
   - tmp
 keep_files:
   - .git
@@ -101,20 +65,6 @@ permalink: /:categories/:title/
 timezone: Asia/Shanghai
 
 plugins:
-  - jekyll-paginate
   - jekyll-sitemap
-  - jekyll-gist
   - jekyll-feed
   - jekyll-redirect-from
-
-whitelist:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-gist
-  - jekyll-feed
-  - jemoji
-
-compress_html:
-  clippings: all
-  ignore:
-    envs: development

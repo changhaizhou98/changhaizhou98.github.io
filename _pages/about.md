@@ -7,6 +7,10 @@ redirect_from:
   - /about/
   - /about.html
   - /homepage/
+  - /zhouchanghai/
+  - /zhouchanghai/about/
+  - /zhouchanghai/about.html
+  - /zhouchanghai/homepage/
 ---
 
 <div class="academic-home">
