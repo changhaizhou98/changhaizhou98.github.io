@@ -24,6 +24,10 @@ redirect_from:
     </p>
 
     <p>
+      I have interned with Baidu's ERNIE team, Meituan's LongCat team, and ByteDance's foundation model team.
+    </p>
+
+    <p>
       I work on the full path from model compression and parameter-efficient adaptation to post-training infrastructure,
       multi-tenant serving, evaluation, and multimodal generation.
     </p>
