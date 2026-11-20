@@ -399,7 +399,7 @@ redirect_from:
     </div>
 
     <div class="publication-group">
-      <h2>多模态生成模型</h2>
+      <h2>多模态理解与生成</h2>
 
       <div class="publication-list">
         <article class="publication-item">

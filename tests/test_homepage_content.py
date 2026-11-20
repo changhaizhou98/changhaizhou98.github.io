@@ -198,7 +198,7 @@ class HomepageTest(unittest.TestCase):
             'Post-training、模型发布与训练服务',
             'LLM Serving 与推理加速',
             '模型压缩与参数高效适配',
-            '多模态生成模型',
+            '多模态理解与生成',
             '评测与代码推理',
         ]:
             self.assertIn(group, about)
