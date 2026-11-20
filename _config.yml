@@ -1,8 +1,8 @@
 # Site Settings
 title                    : "Changhai Zhou"
-seo_title                : "Changhai Zhou (周昌海) | Academic Homepage"
-description              : "Changhai Zhou is a PhD candidate at Fudan University (周昌海, zhouchanghai / changhaizhou) working across the full stack of trillion-parameter (T-scale) foundation models—from pre-training and mid-training to post-training—focusing on training efficiency, data-driven scaling, and model architecture."
-keywords                 : "Changhai Zhou, 周昌海, zhouchanghai, changhaizhou, Zhou Changhai, Fudan University, 复旦大学, Full-Stack LLM, Trillion-Parameter Models, Pre-training, Mid-training, Post-training, Training Efficiency, Data-Driven LLM, Model Architecture, Model Compression, PEFT, LLM Serving"
+seo_title                : "Changhai Zhou (周昌海) | Academic Homepage (zhouchanghai / changhaizhou)"
+description              : "Academic homepage of Changhai Zhou (周昌海, zhouchanghai, changhaizhou, changhaizhou98). PhD candidate at Fudan University (复旦大学) working across the full stack of trillion-parameter (T-scale) foundation models—from pre-training and mid-training to post-training—focusing on training efficiency, data-driven scaling, and model architecture."
+keywords                 : "Changhai Zhou, 周昌海, zhouchanghai, changhaizhou, changhaizhou98, Zhou Changhai, Fudan University, 复旦大学, Full-Stack LLM, Trillion-Parameter Models, Pre-training, Mid-training, Post-training, Training Efficiency, Data-Driven LLM, Model Architecture, Model Compression, PEFT, LLM Serving"
 repository               : "changhaizhou98/changhaizhou98.github.io"
 url                      : "https://changhaizhou98.github.io"
 baseurl                  : ""

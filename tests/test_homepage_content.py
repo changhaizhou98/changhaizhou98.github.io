@@ -45,8 +45,8 @@ class HomepageTest(unittest.TestCase):
         author_profile = (ROOT / '_includes' / 'author-profile.html').read_text()
         robots = (ROOT / 'robots.txt').read_text()
         self.assertIn('title                    : "Changhai Zhou"', config)
-        self.assertIn('seo_title                : "Changhai Zhou (周昌海) | Academic Homepage"', config)
-        self.assertIn('Changhai Zhou is a PhD candidate at Fudan University', config)
+        self.assertIn('seo_title                : "Changhai Zhou (周昌海) | Academic Homepage (zhouchanghai / changhaizhou)"', config)
+        self.assertIn('PhD candidate at Fudan University', config)
         for query_term in ['周昌海', 'zhouchanghai', 'changhaizhou', 'Changhai Zhou']:
             self.assertIn(query_term, config)
         self.assertIn('周昌海', about)
@@ -69,8 +69,7 @@ class HomepageTest(unittest.TestCase):
             '硕博连读',
             'full stack of trillion-parameter (T-scale) foundation models',
             'pre-training, mid-training, and post-training',
-            'SWA',
-            'DSA',
+            'model architecture',
             'training efficiency',
             'data-driven',
             '万亿参数（T 级）基础大模型',

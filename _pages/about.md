@@ -25,23 +25,20 @@ redirect_from:
       I am <strong>Changhai Zhou (周昌海)</strong>, a PhD student (combined Master's–PhD program, enrolled in 2023) at
       <a href="https://www.fudan.edu.cn/" target="_blank" rel="noopener">Fudan University</a>.
       I have hands-on experience across the <strong>full stack of trillion-parameter (T-scale) foundation models</strong>,
-      spanning <strong>pre-training, mid-training, and post-training</strong>. In foundation model research and
-      development, my earlier work focused on <strong>model architecture design</strong> (such as Sliding Window
-      Attention <strong>SWA</strong>, Dynamic Sparse Attention <strong>DSA</strong>, MLA, MTP, and hybrid sparse/MoE
-      architectures), while my recent focus has shifted toward <strong>large-scale training efficiency</strong> and
-      <strong>data-driven</strong> scaling.
+      spanning <strong>pre-training, mid-training, and post-training</strong>. Earlier, my work focused on
+      <strong>model architecture</strong>, while more recently I have focused on <strong>training efficiency</strong>
+      and <strong>data-driven</strong> foundation model scaling.
     </p>
 
     <p>
       I have interned with Baidu's ERNIE team, Meituan's LongCat team, and ByteDance's foundation model team,
       participating in the end-to-end training and iteration of trillion-parameter foundation models across
-      pre-training, mid-training (architecture transition, long-context, and capability continual training), and
-      post-training (SFT, RL, and agentic alignment). At Fudan University, my academic research also covers
+      pre-training, mid-training, and post-training. At Fudan University, my academic research covers
       parameter-efficient fine-tuning (PEFT), model compression, adaptive inference, and multi-tenant LLM serving.
     </p>
 
     <p>
-      我是<strong>周昌海（Changhai Zhou）</strong>，复旦大学 2023 级硕博连读生，曾先后在百度文心（ERNIE）、美团 LongCat 与字节跳动基础大模型团队实习。在工业界万亿参数（T 级）基础大模型研发中，我深度参与过从<strong>预训练（Pre-training）、中训练（Mid-training）到后训练（Post-training）</strong>的模型全栈工作：早期主攻<strong>模型结构演进</strong>（如 <strong>SWA</strong> 滑动窗口注意力、<strong>DSA</strong> 动态稀疏注意力、MLA、MTP 及混合注意力/MoE 架构等），近期更关注大规模<strong>训练效率（Training Efficiency）</strong>与<strong>数据驱动（Data-Driven）</strong>的模型能力演进（包括百万 token 长上下文 RL、低比特 RL 训推对齐、多阶段可验证数据合成与多模态空间/流式智能）。此外，在校期间的学术课题研究主要围绕参数高效微调（PEFT）、模型压缩与多租户推理服务展开。
+      我是<strong>周昌海（Changhai Zhou）</strong>，复旦大学 2023 级硕博连读生，曾先后在百度文心（ERNIE）、美团 LongCat 与字节跳动基础大模型团队实习。我深度参与过万亿参数（T 级）基础大模型从<strong>预训练（Pre-training）、中训练（Mid-training）到后训练（Post-training）</strong>的模型全栈研发：早期主要做<strong>模型结构</strong>相关工作，近期更关注<strong>训练效率（Training Efficiency）</strong>与<strong>数据驱动（Data-Driven）</strong>方向。此外，在校期间的学术研究主要围绕参数高效微调（PEFT）、模型压缩与推理服务展开。
     </p>
   </section>
 
