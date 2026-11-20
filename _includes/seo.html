@@ -8,9 +8,9 @@
   {% assign canonical_url = page.url | replace: "index.html", "" | prepend: site.url %}
 {% endif %}
 
-{% assign seo_title = page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once %}
+{% assign seo_title = page.title | default: site.seo_title | default: site.title | markdownify | strip_html | strip_newlines | escape_once %}
 {% if page.url == '/' or page.permalink == '/' %}
-  <title>{{ site.title }}</title>
+  <title>{{ site.seo_title | default: site.title }}</title>
 {% else %}
   <title>{{ seo_title }} | {{ site.title }}</title>
 {% endif %}
@@ -35,10 +35,14 @@
 {% endif %}
 
 <meta property="og:locale" content="en">
+<meta property="og:locale:alternate" content="zh_CN">
 <meta property="og:site_name" content="{{ site.title }}">
 <meta property="og:title" content="{{ seo_title }}">
 {% if site.author.name %}
-  <meta name="author" content="{{ site.author.name | escape_once }}">
+  <meta name="author" content="{{ site.author.name | escape_once }}{% if site.author.chinese_name %} ({{ site.author.chinese_name | escape_once }}){% endif %}">
+{% endif %}
+{% if site.keywords %}
+  <meta name="keywords" content="{{ site.keywords | escape_once }}">
 {% endif %}
 
 {% if seo_url %}
@@ -57,12 +61,25 @@
     "@context": "https://schema.org",
     "@type": "Person",
     "name": {{ site.author.name | jsonify }},
+    "alternateName": {{ site.author.aliases | jsonify }},
+    "description": {{ seo_description | jsonify }},
     "url": {{ site.url | jsonify }},
     "jobTitle": "PhD Candidate",
     "affiliation": {
       "@type": "CollegeOrUniversity",
       "name": {{ site.author.employer | jsonify }}
     },
+    "knowsAbout": [
+      "Trillion-Parameter Foundation Models",
+      "LLM Pre-training",
+      "LLM Mid-training",
+      "LLM Post-training",
+      "Reinforcement Learning",
+      "Model Compression",
+      "Parameter-Efficient Fine-Tuning (PEFT)",
+      "Adaptive Inference",
+      "LLM Serving Systems"
+    ],
     "sameAs": [
       "https://github.com/{{ site.author.github }}",
       {{ site.author.googlescholar | jsonify }}

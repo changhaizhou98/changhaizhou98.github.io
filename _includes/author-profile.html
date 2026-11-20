@@ -9,7 +9,12 @@
   </div>
 
   <div class="author__content">
-    <h3 class="author__name">{{ author.name }}</h3>
+    <h3 class="author__name" itemprop="name">{{ author.name }}{% if author.chinese_name %} ({{ author.chinese_name }}){% endif %}</h3>
+    {% if author.aliases %}
+      {% for alias in author.aliases %}
+        <meta itemprop="alternateName" content="{{ alias }}">
+      {% endfor %}
+    {% endif %}
     {% if author.bio %}<p class="author__bio">{{ author.bio }}</p>{% endif %}
   </div>
 

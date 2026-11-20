@@ -11,6 +11,10 @@ redirect_from:
   - /zhouchanghai/about/
   - /zhouchanghai/about.html
   - /zhouchanghai/homepage/
+  - /changhaizhou/
+  - /changhaizhou/about/
+  - /changhaizhou/about.html
+  - /changhaizhou/homepage/
 ---
 
 <div class="academic-home">
@@ -18,18 +22,23 @@ redirect_from:
     <h1>About Me</h1>
 
     <p>
-      I am a direct-track PhD student at <a href="https://www.fudan.edu.cn/" target="_blank" rel="noopener">Fudan University</a>,
-      enrolled in 2023. My research focuses on efficient large language models, especially compression, PEFT, adaptive
-      inference, and LLM serving systems.
+      I am <strong>Changhai Zhou (周昌海)</strong>, a direct-track PhD student at
+      <a href="https://www.fudan.edu.cn/" target="_blank" rel="noopener">Fudan University</a> (enrolled in 2023).
+      I work across the <strong>full stack of trillion-parameter (T-scale) foundation models</strong>—with hands-on
+      experience spanning <strong>pre-training, mid-training, and post-training</strong>—alongside research on efficient
+      large language models, model compression, parameter-efficient fine-tuning (PEFT), long-context reinforcement
+      learning, adaptive inference, and multi-tenant LLM serving systems.
     </p>
 
     <p>
-      I have interned with Baidu's ERNIE team, Meituan's LongCat team, and ByteDance's foundation model team.
+      I have interned with Baidu's ERNIE team, Meituan's LongCat team, and ByteDance's foundation model team,
+      participating in the end-to-end training and iteration of trillion-parameter foundation models across
+      pre-training, mid-training (continual capability and long-context training), and post-training (SFT, RL, and
+      agentic alignment).
     </p>
 
     <p>
-      I work on the full path from model compression and parameter-efficient adaptation to post-training infrastructure,
-      multi-tenant serving, evaluation, and multimodal generation.
+      我是<strong>周昌海（Changhai Zhou）</strong>，复旦大学 2023 级直博生。我深度参与过万亿参数（T 级）基础大模型从<strong>预训练（Pre-training）、中训练（Mid-training）到后训练（Post-training）</strong>的模型全栈研发，工作覆盖大规模训练与推理基础设施、长上下文强化学习、Agent 训练对齐、模型压缩与参数高效微调（PEFT）、多租户推理服务、评测基准以及多模态生成。
     </p>
   </section>
 

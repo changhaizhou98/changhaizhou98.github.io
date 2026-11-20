@@ -16,6 +16,10 @@ class HomepageTest(unittest.TestCase):
             '/zhouchanghai/about/',
             '/zhouchanghai/about.html',
             '/zhouchanghai/homepage/',
+            '/changhaizhou/',
+            '/changhaizhou/about/',
+            '/changhaizhou/about.html',
+            '/changhaizhou/homepage/',
         ]:
             self.assertIn(f'\n  - {alias}\n', about)
 
@@ -37,11 +41,35 @@ class HomepageTest(unittest.TestCase):
     def test_site_identity_is_searchable_by_name(self):
         config = (ROOT / '_config.yml').read_text()
         seo = (ROOT / '_includes' / 'seo.html').read_text()
+        about = (ROOT / '_pages' / 'about.md').read_text()
+        author_profile = (ROOT / '_includes' / 'author-profile.html').read_text()
+        robots = (ROOT / 'robots.txt').read_text()
         self.assertIn('title                    : "Changhai Zhou"', config)
+        self.assertIn('seo_title                : "Changhai Zhou (周昌海) | Academic Homepage"', config)
         self.assertIn('Changhai Zhou is a PhD candidate at Fudan University', config)
+        for query_term in ['周昌海', 'zhouchanghai', 'changhaizhou', 'Changhai Zhou']:
+            self.assertIn(query_term, config)
+        self.assertIn('周昌海', about)
         self.assertIn('<meta name="description" content="{{ seo_description }}">', seo)
+        self.assertIn('<meta name="keywords" content="{{ site.keywords | escape_once }}">', seo)
         self.assertIn('"@type": "Person"', seo)
         self.assertIn('"name": {{ site.author.name | jsonify }}', seo)
+        self.assertIn('"alternateName": {{ site.author.aliases | jsonify }}', seo)
+        self.assertIn('author.chinese_name', author_profile)
+        self.assertIn('Sitemap: https://changhaizhou98.github.io/sitemap.xml', robots)
+
+    def test_about_highlights_full_stack_trillion_parameter_experience(self):
+        config = (ROOT / '_config.yml').read_text()
+        about = (ROOT / '_pages' / 'about.md').read_text()
+        self.assertIn('Full-Stack T-Scale LLMs (Pre-/Mid-/Post-Training)', config)
+        for phrase in [
+            'full stack of trillion-parameter (T-scale) foundation models',
+            'pre-training, mid-training, and post-training',
+            '万亿参数（T 级）基础大模型',
+            '预训练（Pre-training）、中训练（Mid-training）到后训练（Post-training）',
+            '模型全栈',
+        ]:
+            self.assertIn(phrase, about)
 
     def test_site_links_do_not_force_new_tabs(self):
         head = (ROOT / '_includes' / 'head.html').read_text()

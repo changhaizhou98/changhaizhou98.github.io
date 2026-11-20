@@ -1,14 +1,24 @@
 # Site Settings
 title                    : "Changhai Zhou"
-description              : "Changhai Zhou is a PhD candidate at Fudan University researching efficient LLMs, model compression, PEFT, adaptive inference, and LLM serving."
+seo_title                : "Changhai Zhou (周昌海) | Academic Homepage"
+description              : "Changhai Zhou is a PhD candidate at Fudan University (周昌海, zhouchanghai / changhaizhou) working across the full stack of trillion-parameter (T-scale) foundation models—from pre-training and mid-training to post-training—as well as efficient LLMs, model compression, PEFT, adaptive inference, and LLM serving."
+keywords                 : "Changhai Zhou, 周昌海, zhouchanghai, changhaizhou, Zhou Changhai, Fudan University, 复旦大学, Full-Stack LLM, Trillion-Parameter Models, Pre-training, Mid-training, Post-training, Efficient LLMs, Model Compression, PEFT, Adaptive Inference, LLM Serving"
 repository               : "changhaizhou98/changhaizhou98.github.io"
 url                      : "https://changhaizhou98.github.io"
 baseurl                  : ""
 
 author:
   name             : "Changhai Zhou"
+  chinese_name     : "周昌海"
+  aliases          :
+    - "周昌海"
+    - "Changhai Zhou"
+    - "Zhou Changhai"
+    - "zhouchanghai"
+    - "changhaizhou"
+    - "changhaizhou98"
   avatar           : "images/me.png"
-  bio              : "PhD Candidate at Fudan University | Efficient LLMs, Compression, and PEFT"
+  bio              : "PhD Candidate at Fudan University | Full-Stack T-Scale LLMs (Pre-/Mid-/Post-Training) & Efficient LLM Systems"
   location         : "Shanghai, China"
   employer         : "Fudan University"
   googlescholar    : "https://scholar.google.com/citations?user=mM3rnV4AAAAJ&hl=zh-CN"

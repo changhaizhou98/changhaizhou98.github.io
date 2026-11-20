@@ -1,9 +1,11 @@
-# Changhai Zhou — Academic Homepage
+# Changhai Zhou (周昌海) — Academic Homepage
 
-**[Visit the academic homepage](https://changhaizhou98.github.io/).**
+**[Visit the academic homepage of Changhai Zhou (周昌海 | zhouchanghai | changhaizhou)](https://changhaizhou98.github.io/).**
+
+Changhai Zhou (周昌海) is a direct-track PhD candidate at Fudan University working across the full stack of trillion-parameter (T-scale) foundation models—from pre-training and mid-training to post-training—as well as efficient LLMs, model compression, PEFT, long-context RL, adaptive inference, and multi-tenant LLM serving systems.
 
 GitHub Pages publishes this Jekyll site from the root of `main`.
-The homepage front matter forwards the former `/zhouchanghai/` URLs to `/`.
+The homepage front matter forwards `/zhouchanghai/` and `/changhaizhou/` URLs to `/`.
 
 ## Editing the site
 
