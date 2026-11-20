@@ -2,7 +2,7 @@
 
 **[Visit the academic homepage of Changhai Zhou (周昌海 | zhouchanghai | changhaizhou)](https://changhaizhou98.github.io/).**
 
-Changhai Zhou (周昌海) is a direct-track PhD candidate at Fudan University working across the full stack of trillion-parameter (T-scale) foundation models—from pre-training and mid-training to post-training—as well as efficient LLMs, model compression, PEFT, long-context RL, adaptive inference, and multi-tenant LLM serving systems.
+Changhai Zhou (周昌海) is a PhD candidate (combined Master's–PhD program) at Fudan University working across the full stack of trillion-parameter (T-scale) foundation models—from pre-training and mid-training to post-training—with earlier research on model architecture and structural optimization and recent focus on training efficiency and data-driven foundation model scaling.
 
 GitHub Pages publishes this Jekyll site from the root of `main`.
 The homepage front matter forwards `/zhouchanghai/` and `/changhaizhou/` URLs to `/`.

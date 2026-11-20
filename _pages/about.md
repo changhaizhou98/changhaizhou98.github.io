@@ -22,12 +22,13 @@ redirect_from:
     <h1>About Me</h1>
 
     <p>
-      I am <strong>Changhai Zhou (周昌海)</strong>, a direct-track PhD student at
-      <a href="https://www.fudan.edu.cn/" target="_blank" rel="noopener">Fudan University</a> (enrolled in 2023).
-      I work across the <strong>full stack of trillion-parameter (T-scale) foundation models</strong>—with hands-on
-      experience spanning <strong>pre-training, mid-training, and post-training</strong>—alongside research on efficient
-      large language models, model compression, parameter-efficient fine-tuning (PEFT), long-context reinforcement
-      learning, adaptive inference, and multi-tenant LLM serving systems.
+      I am <strong>Changhai Zhou (周昌海)</strong>, a PhD student (combined Master's–PhD program, enrolled in 2023) at
+      <a href="https://www.fudan.edu.cn/" target="_blank" rel="noopener">Fudan University</a>.
+      I work across the <strong>full stack of trillion-parameter (T-scale) foundation models</strong>, with hands-on
+      experience spanning <strong>pre-training, mid-training, and post-training</strong>. While my earlier research
+      centered on model architecture and structural optimization (compression, low-rank/sparse architectures, PEFT, and
+      adaptive inference), my recent focus has shifted toward <strong>training efficiency</strong> and
+      <strong>data-driven</strong> foundation model scaling.
     </p>
 
     <p>
@@ -38,7 +39,7 @@ redirect_from:
     </p>
 
     <p>
-      我是<strong>周昌海（Changhai Zhou）</strong>，复旦大学 2023 级直博生。我深度参与过万亿参数（T 级）基础大模型从<strong>预训练（Pre-training）、中训练（Mid-training）到后训练（Post-training）</strong>的模型全栈研发，工作覆盖大规模训练与推理基础设施、长上下文强化学习、Agent 训练对齐、模型压缩与参数高效微调（PEFT）、多租户推理服务、评测基准以及多模态生成。
+      我是<strong>周昌海（Changhai Zhou）</strong>，复旦大学 2023 级硕博连读生。我深度参与过万亿参数（T 级）基础大模型从<strong>预训练（Pre-training）、中训练（Mid-training）到后训练（Post-training）</strong>的模型全栈研发；早期研究侧重于模型结构与架构级优化（模型压缩、低秩与稀疏结构、参数高效微调 PEFT 及自适应推理），近期重点关注大规模<strong>训练效率（Training Efficiency）</strong>与<strong>数据驱动（Data-Driven）</strong>的模型能力演进，工作覆盖训推基础设施、长上下文强化学习、Agent 训练对齐、多租户推理服务与多模态生成。
     </p>
   </section>
 

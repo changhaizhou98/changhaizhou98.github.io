@@ -62,12 +62,21 @@ class HomepageTest(unittest.TestCase):
         config = (ROOT / '_config.yml').read_text()
         about = (ROOT / '_pages' / 'about.md').read_text()
         self.assertIn('Full-Stack T-Scale LLMs (Pre-/Mid-/Post-Training)', config)
+        self.assertNotIn('direct-track', about)
+        self.assertNotIn('直博', about)
         for phrase in [
+            "combined Master's–PhD program",
+            '硕博连读',
             'full stack of trillion-parameter (T-scale) foundation models',
             'pre-training, mid-training, and post-training',
+            'training efficiency',
+            'data-driven',
             '万亿参数（T 级）基础大模型',
             '预训练（Pre-training）、中训练（Mid-training）到后训练（Post-training）',
             '模型全栈',
+            '模型结构',
+            '训练效率',
+            '数据驱动',
         ]:
             self.assertIn(phrase, about)
 
