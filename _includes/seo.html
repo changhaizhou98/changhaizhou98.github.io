@@ -8,9 +8,13 @@
   {% assign canonical_url = page.url | replace: "index.html", "" | prepend: site.url %}
 {% endif %}
 
-{% assign seo_title = page.title | default: site.seo_title | default: site.title | markdownify | strip_html | strip_newlines | escape_once %}
+{% if page.title and page.title != "" %}
+  {% assign seo_title = page.title | markdownify | strip_html | strip_newlines | escape_once %}
+{% else %}
+  {% assign seo_title = site.seo_title | default: site.title | strip_html | strip_newlines | escape_once %}
+{% endif %}
 {% if page.url == '/' or page.permalink == '/' %}
-  <title>{{ site.seo_title | default: site.title }}</title>
+  <title>{{ seo_title }}</title>
 {% else %}
   <title>{{ seo_title }} | {{ site.title }}</title>
 {% endif %}
