@@ -69,6 +69,8 @@ class HomepageTest(unittest.TestCase):
             '硕博连读',
             'full stack of trillion-parameter (T-scale) foundation models',
             'pre-training, mid-training, and post-training',
+            'SWA',
+            'DSA',
             'training efficiency',
             'data-driven',
             '万亿参数（T 级）基础大模型',
@@ -208,6 +210,9 @@ class HomepageTest(unittest.TestCase):
             'Introducing Macaron-V1',
             'Macaron-V1-Preview: A 749B Personal Agent Model with Mixture of LoRA',
             'MinT: Managed Infrastructure for Training and Serving Millions of LLMs',
+            'miniTE: Diagnosing and Bridging the Execution Gap in Native NVFP4 Reinforcement Learning',
+            'Hierarchical Skill Evolution for Coding Agents',
+            'Positions Are Not Facts: The Mismatch Between KV Caches and Memory',
             'Dynamic Operator Optimization for Efficient Multi-Tenant LoRA Model Serving',
             'Making Activation Sparsity Executable in Grouped Low-Bit LLMs',
             'Deputy: Accelerating Large Language Model Inference with Dynamic Low-Rank Substitution',
@@ -218,6 +223,10 @@ class HomepageTest(unittest.TestCase):
             'QPruner: Probabilistic Decision Quantization for Structured Pruning in Large Language Models',
             'BSLoRA: Enhancing the Parameter Efficiency of LoRA with Intra-Layer and Inter-Layer Sharing',
             'LaRA: Layer-wise Rank Allocation for Efficient Fine-Tuning of Pruned Large Language Models',
+            'MJev-Spatial: System One Spatial Intelligence via Native Attention Matching',
+            'OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction',
+            'TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs',
+            'GlyphAtlas: Disentangling Stroke Detail from Layout for Scene Text Synthesis',
             'SoulX-FlashHead: Oracle-guided Generation of Infinite Real-time Streaming Talking Heads',
             'Enhancing Object Coherence in Layout-to-Image Synthesis',
             'CoRE: A Fine-Grained Code Reasoning Benchmark Beyond Output Prediction',
@@ -226,8 +235,8 @@ class HomepageTest(unittest.TestCase):
 
     def test_publications_include_authors_and_highlight_me(self):
         about = (ROOT / '_pages' / 'about.md').read_text()
-        self.assertEqual(about.count('class="publication-authors"'), 18)
-        self.assertGreaterEqual(about.count('<strong>Changhai Zhou</strong>'), 14)
+        self.assertEqual(about.count('class="publication-authors"'), 25)
+        self.assertGreaterEqual(about.count('<strong>Changhai Zhou</strong>'), 21)
 
     def test_mindlab_publications_use_lab_author(self):
         about = (ROOT / '_pages' / 'about.md').read_text()
@@ -262,8 +271,11 @@ class HomepageTest(unittest.TestCase):
             ('2606.02437', 'Ranked #2 on Hugging Face Daily Papers'),
             ('2605.13779', 'Ranked #1 on Hugging Face Daily Papers'),
             ('2607.14952', 'Ranked #1 on Hugging Face Daily Papers'),
+            ('2610.22276', 'Ranked #2 on Hugging Face Daily Papers'),
+            ('2610.01762', 'Ranked #2 on Hugging Face Daily Papers'),
+            ('2607.17423', 'Ranked #3 on Hugging Face Daily Papers'),
         ]
-        self.assertEqual(about.count('class="pub-rank"'), 3)
+        self.assertEqual(about.count('class="pub-rank"'), 6)
         for paper_id, label in expected_rankings:
             self.assertIn(
                 f'<a href="https://huggingface.co/papers/{paper_id}" target="_blank" rel="noopener">{label}</a>',
@@ -323,6 +335,13 @@ class HomepageTest(unittest.TestCase):
             'macaron-v1-preview-main.png',
             'rankadaptor-main.png',
             'bslora-main.png',
+            'mjev-spatial-main.png',
+            'onestreamer-main.png',
+            'timelens2-main.png',
+            'glyphatlas-main.png',
+            'minite-main.png',
+            'hse-main.png',
+            'positions-not-facts-main.png',
             'soulx-flashhead-main.png',
             'object-coherence-main.png',
             'core-benchmark-main.png',

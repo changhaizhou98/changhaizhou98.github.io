@@ -24,22 +24,24 @@ redirect_from:
     <p>
       I am <strong>Changhai Zhou (周昌海)</strong>, a PhD student (combined Master's–PhD program, enrolled in 2023) at
       <a href="https://www.fudan.edu.cn/" target="_blank" rel="noopener">Fudan University</a>.
-      I work across the <strong>full stack of trillion-parameter (T-scale) foundation models</strong>, with hands-on
-      experience spanning <strong>pre-training, mid-training, and post-training</strong>. While my earlier research
-      centered on model architecture and structural optimization (compression, low-rank/sparse architectures, PEFT, and
-      adaptive inference), my recent focus has shifted toward <strong>training efficiency</strong> and
-      <strong>data-driven</strong> foundation model scaling.
+      I have hands-on experience across the <strong>full stack of trillion-parameter (T-scale) foundation models</strong>,
+      spanning <strong>pre-training, mid-training, and post-training</strong>. In foundation model research and
+      development, my earlier work focused on <strong>model architecture design</strong> (such as Sliding Window
+      Attention <strong>SWA</strong>, Dynamic Sparse Attention <strong>DSA</strong>, MLA, MTP, and hybrid sparse/MoE
+      architectures), while my recent focus has shifted toward <strong>large-scale training efficiency</strong> and
+      <strong>data-driven</strong> scaling.
     </p>
 
     <p>
       I have interned with Baidu's ERNIE team, Meituan's LongCat team, and ByteDance's foundation model team,
       participating in the end-to-end training and iteration of trillion-parameter foundation models across
-      pre-training, mid-training (continual capability and long-context training), and post-training (SFT, RL, and
-      agentic alignment).
+      pre-training, mid-training (architecture transition, long-context, and capability continual training), and
+      post-training (SFT, RL, and agentic alignment). At Fudan University, my academic research also covers
+      parameter-efficient fine-tuning (PEFT), model compression, adaptive inference, and multi-tenant LLM serving.
     </p>
 
     <p>
-      我是<strong>周昌海（Changhai Zhou）</strong>，复旦大学 2023 级硕博连读生。我深度参与过万亿参数（T 级）基础大模型从<strong>预训练（Pre-training）、中训练（Mid-training）到后训练（Post-training）</strong>的模型全栈研发；早期研究侧重于模型结构与架构级优化（模型压缩、低秩与稀疏结构、参数高效微调 PEFT 及自适应推理），近期重点关注大规模<strong>训练效率（Training Efficiency）</strong>与<strong>数据驱动（Data-Driven）</strong>的模型能力演进，工作覆盖训推基础设施、长上下文强化学习、Agent 训练对齐、多租户推理服务与多模态生成。
+      我是<strong>周昌海（Changhai Zhou）</strong>，复旦大学 2023 级硕博连读生，曾先后在百度文心（ERNIE）、美团 LongCat 与字节跳动基础大模型团队实习。在工业界万亿参数（T 级）基础大模型研发中，我深度参与过从<strong>预训练（Pre-training）、中训练（Mid-training）到后训练（Post-training）</strong>的模型全栈工作：早期主攻<strong>模型结构演进</strong>（如 <strong>SWA</strong> 滑动窗口注意力、<strong>DSA</strong> 动态稀疏注意力、MLA、MTP 及混合注意力/MoE 架构等），近期更关注大规模<strong>训练效率（Training Efficiency）</strong>与<strong>数据驱动（Data-Driven）</strong>的模型能力演进（包括百万 token 长上下文 RL、低比特 RL 训推对齐、多阶段可验证数据合成与多模态空间/流式智能）。此外，在校期间的学术课题研究主要围绕参数高效微调（PEFT）、模型压缩与多租户推理服务展开。
     </p>
   </section>
 
@@ -193,6 +195,37 @@ redirect_from:
             </p>
           </div>
         </article>
+
+        <article class="publication-item">
+          <img class="publication-thumb" src="{{ '/images/papers/minite-main.png' | relative_url }}" alt="Main figure for miniTE NVFP4 reinforcement learning">
+          <div class="publication-body">
+            <h3>miniTE: Diagnosing and Bridging the Execution Gap in Native NVFP4 Reinforcement Learning</h3>
+            <p class="publication-authors">Zhen Li, Mingfa Feng, Yiming Zhang, Yang Yu, <strong>Changhai Zhou</strong>, Pengxiang Li, Dongkuan Wu, Congkai Xie, Hongxia Yang</p>
+            <p class="pub-meta">Technical Report / Core Contributor</p>
+            <p>
+              面向大模型强化学习（RL）中原生 NVFP4 低比特训练与采样引擎跨引擎数值执行不一致导致的训练失稳问题，提出结合执行诊断、跨引擎数值对齐与高效原生 W4A4 GEMM 的轻量框架 miniTE；在 Qwen3-30B-A3B 长程 RL 上逼近 BF16 评测质量，并在单节点 B300 上实现相比 BF16 与 TE NVFP4 分别 1.39× 与 1.47× 的完整 learner 更新吞吐。
+            </p>
+            <p class="pub-buttons">
+              <a href="https://arxiv.org/abs/2610.23928" target="_blank" rel="noopener">arXiv</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="publication-item">
+          <img class="publication-thumb" src="{{ '/images/papers/hse-main.png' | relative_url }}" alt="Main figure for Hierarchical Skill Evolution for Coding Agents">
+          <div class="publication-body">
+            <h3>Hierarchical Skill Evolution for Coding Agents</h3>
+            <p class="publication-authors">Jun Gao, Yun Peng, <strong>Changhai Zhou</strong>, Yuhan Zhu, Xiangyu Zeng, Shiyang Zhang, Yuhua Zhou, Luozheng Qin, Qian Qiao, Xiaoteng Ma, Baian Chen, Weiyi Shang, Zhen Ming Jack Jiang, Lizhi Liao, Xiaoxue Ren</p>
+            <p class="pub-meta">Technical Report / Core Contributor</p>
+            <p>
+              针对 Coding Agent 执行轨迹高度耦合特定代码仓库与任务上下文、难以直接提炼跨环境可迁移技能的问题，提出分层技能演化框架（HSE）；从原始代码轨迹中递进蒸馏过程化技能表示并持续演化复用，在不修改底层模型参数的前提下提升 Coding Agent 的跨仓库泛化效率。
+            </p>
+            <p class="pub-buttons">
+              <a href="https://arxiv.org/abs/2610.35616" target="_blank" rel="noopener">arXiv</a>
+              <a href="https://github.com/jungao1106/SKILL_EVO" target="_blank" rel="noopener">Code</a>
+            </p>
+          </div>
+        </article>
       </div>
     </div>
 
@@ -200,6 +233,20 @@ redirect_from:
       <h2>LLM Serving 与推理加速</h2>
 
       <div class="publication-list">
+        <article class="publication-item">
+          <img class="publication-thumb" src="{{ '/images/papers/positions-not-facts-main.png' | relative_url }}" alt="Main figure for Positions Are Not Facts: The Mismatch Between KV Caches and Memory">
+          <div class="publication-body">
+            <h3>Positions Are Not Facts: The Mismatch Between KV Caches and Memory</h3>
+            <p class="publication-authors"><strong>Changhai Zhou</strong>, Yuhua Zhou, Shiyang Zhang, Jun Gao, Zhen Li, Hua Wu, Hanchao Yu, Haifeng Wang</p>
+            <p class="pub-meta">Technical Report / 一作</p>
+            <p>
+              针对长上下文与多轮交互中事实更新时直接掩码（masking）KV cache 旧位置与真实记忆更新之间的语义错位问题，系统对比整条记录掩码、被替换值掩码与删除重算三类机制；揭示位置掩码虽能增强新值偏好但会破坏跨位置绑定的完整上下文信息与历史可追溯性，阐明 KV cache 位置操作与事实级记忆更新之间的本质差异。
+            </p>
+            <p class="pub-buttons">
+              <a href="https://arxiv.org/abs/2609.33759" target="_blank" rel="noopener">arXiv</a>
+            </p>
+          </div>
+        </article>
         <article class="publication-item">
           <img class="publication-thumb" src="{{ '/images/papers/dynamic-operator-optimization-main.png' | relative_url }}" alt="Main figure for Dynamic Operator Optimization">
           <div class="publication-body">
@@ -358,6 +405,85 @@ redirect_from:
       <h2>多模态生成模型</h2>
 
       <div class="publication-list">
+        <article class="publication-item">
+          <img class="publication-thumb" src="{{ '/images/papers/mjev-spatial-main.png' | relative_url }}" alt="Main figure for MJev-Spatial">
+          <div class="publication-body">
+            <h3>MJev-Spatial: System One Spatial Intelligence via Native Attention Matching</h3>
+            <p class="publication-authors">Luozheng Qin*, Yuhan Zhu*, <strong>Changhai Zhou</strong>*†, Qian Qiao, Jun Gao, Yuhua Zhou, Harry Zhang, Xiangyu Zeng, Yuxuan Liu, Yuxin Lu, Kaijie Chen, Andrew Chen†, Pony Ma†</p>
+            <p class="pub-meta">Technical Report / 共一・通讯</p>
+            <p class="pub-rank">
+              <a href="https://huggingface.co/papers/2610.22276" target="_blank" rel="noopener">Ranked #2 on Hugging Face Daily Papers</a>
+            </p>
+            <p>
+              面向空间智能中选择题、数值估计与 2D 指点三类决策任务被自回归 VLM 低效逐 token 生成的问题，提出 System 1 多模态空间决策模型 MJev-Spatial；直接复用主干最后一层 full-attention 的原生预训练 Q/K 投影对候选集或由粗到细区间/网格打分，单次前向即可完成零答案 token 决策；结合教师强制多阶段单次前向训练与长度感知全局动态负载均衡将训练吞吐提升 30.8%，基于 12.3M 空间问答数据训练的 4B 模型在 12 项空间评测中取得 65.64% 最高总分（7/12 第一），推理速度较最快自回归基线与原模型分别提升 2.5× 与 5.6×。
+            </p>
+            <p class="pub-buttons">
+              <a href="https://arxiv.org/abs/2610.22276" target="_blank" rel="noopener">arXiv</a>
+              <a href="https://github.com/Fr0zenCrane/MJev-Spatial" target="_blank" rel="noopener">Code</a>
+              <a href="https://huggingface.co/mindlab-research/MJev-Spatial-4B" target="_blank" rel="noopener">Model</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="publication-item">
+          <img class="publication-thumb" src="{{ '/images/papers/onestreamer-main.png' | relative_url }}" alt="Main figure for OneStreamer">
+          <div class="publication-body">
+            <h3>OneStreamer: Unifying Perception, Memory, and Proactive Response in Streaming Video Interaction</h3>
+            <p class="publication-authors">Xiangyu Zeng*, Yuandong Yang*, Zhiqiu Zhang*, Yuhan Zhu*, Xinhao Li*, Qingyi Si*, Dingyu Yao, Changlian Ma, Haoran Chen, Xinyu Chen, Yansong Shi, Junhao Zhou, Yifei Li, Jun Zhang, Chuanyu Qin, Chenxu Yang, Xinlei Yu, Kun Ouyang, Yuchen Shao, Qianshan Wei, <strong>Changhai Zhou</strong>, Jun Gao, Jiaqi Wang, Limin Wang†</p>
+            <p class="pub-meta">Technical Report / Core Contributor</p>
+            <p class="pub-rank">
+              <a href="https://huggingface.co/papers/2610.01762" target="_blank" rel="noopener">Ranked #2 on Hugging Face Daily Papers</a>
+            </p>
+            <p>
+              针对流式视频交互中模型需在未知未来查询前留存高价值事实证据并及时主动响应的挑战，提出将无查询证据记录与任务响应统一到共享主动生成过程的 OneStreamer；结合主动分层字幕记忆（PHCM）、仅监督 27.5% 状态 token 的主动状态转移学习（PSTL）以及构建百万级流式视频交互数据集 OneStreamer-1M，4B 模型在全部 8 项流式视频理解基准上取得最优表现。
+            </p>
+            <p class="pub-buttons">
+              <a href="https://mcg-nju.github.io/OneStreamer" target="_blank" rel="noopener">Project</a>
+              <a href="https://arxiv.org/abs/2610.01762" target="_blank" rel="noopener">arXiv</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="publication-item">
+          <img class="publication-thumb" src="{{ '/images/papers/timelens2-main.png' | relative_url }}" alt="Main figure for TimeLens2">
+          <div class="publication-body">
+            <h3>TimeLens2: Generalist Video Temporal Grounding with Multimodal LLMs</h3>
+            <p class="publication-authors">Yuhan Zhu*, Changlian Ma*, Xiangyu Zeng*, Xinhao Li*, Zhiqiu Zhang*, Songze Li, Jun Zhang, Tianxiang Jiang, Yuandong Yang, Ziang Yan, Zikang Wang, Xinyu Chen, Haoran Chen, Shaowei Zhang, <strong>Changhai Zhou</strong>, Limin Wang†</p>
+            <p class="pub-meta">Technical Report / Core Contributor</p>
+            <p class="pub-rank">
+              <a href="https://huggingface.co/papers/2607.17423" target="_blank" rel="noopener">Ranked #3 on Hugging Face Daily Papers</a>
+            </p>
+            <p>
+              面向通用视频时序定位（Video Temporal Grounding）中变基数证据区间集合预测与传统单遍标注、脆弱区间匹配奖励失配的问题，构建六阶段可验证多区间数据管线 TimeLens2-93K，并提出基于合并区间支撑集精确一维 Wasserstein 距离与 tIoU 互补的免匹配时序强化学习奖励；2B/4B/8B 模型在 7 个主流基准上较 Qwen3-VL 基座提升 13.0–18.1 mIoU，4B 与 8B 变体超越最高 397B 参数量的开源模型取得 SOTA。
+            </p>
+            <p class="pub-buttons">
+              <a href="https://mcg-nju.github.io/TimeLens2" target="_blank" rel="noopener">Project</a>
+              <a href="https://arxiv.org/abs/2607.17423" target="_blank" rel="noopener">arXiv</a>
+              <a href="https://github.com/MCG-NJU/TimeLens2" target="_blank" rel="noopener">Code</a>
+              <a href="https://huggingface.co/collections/MCG-NJU/timelens2" target="_blank" rel="noopener">Models &amp; Data</a>
+            </p>
+          </div>
+        </article>
+
+        <article class="publication-item">
+          <img class="publication-thumb" src="{{ '/images/papers/glyphatlas-main.png' | relative_url }}" alt="Main figure for GlyphAtlas">
+          <div class="publication-body">
+            <h3>GlyphAtlas: Disentangling Stroke Detail from Layout for Scene Text Synthesis</h3>
+            <p class="publication-authors">Luozheng Qin*, <strong>Changhai Zhou</strong>*, Yiyi Zhou†</p>
+            <p class="pub-meta">Technical Report / 共一</p>
+            <p>
+              针对场景文字合成中传统字形图将字形分辨率与目标区域尺寸强绑定、导致小字与密集复杂文字笔画失真的问题，提出解耦空间布局锚点与高分辨率独立字形图集（Glyph Atlas）的生成框架 GlyphAtlas；通过图集锚定注意力（Atlas-Anchored Attention）按区域检索精细笔画并结合掩码加权流匹配训练，在小字、密集排版及零样本跨语种场景文字生成上取得领先表现。
+            </p>
+            <p class="pub-buttons">
+              <a href="https://fr0zencrane.github.io/project-glyphatlas/" target="_blank" rel="noopener">Project</a>
+              <a href="https://arxiv.org/abs/2611.20192" target="_blank" rel="noopener">arXiv</a>
+              <a href="https://github.com/Fr0zenCrane/GlyphAtlas" target="_blank" rel="noopener">Code</a>
+              <a href="https://huggingface.co/Fr0zencr4nE/GlyphAtlas" target="_blank" rel="noopener">Model</a>
+              <a href="https://huggingface.co/datasets/Fr0zencr4nE/GlyphAtlas-Data-1.5M" target="_blank" rel="noopener">Dataset</a>
+            </p>
+          </div>
+        </article>
+
         <article class="publication-item">
           <img class="publication-thumb" src="{{ '/images/papers/soulx-flashhead-main.png' | relative_url }}" alt="Main figure for SoulX-FlashHead">
           <div class="publication-body">
