@@ -264,7 +264,7 @@ redirect_from:
           <div class="publication-body">
             <h3>Making Activation Sparsity Executable in Grouped Low-Bit LLMs</h3>
             <p class="publication-authors"><strong>Changhai Zhou</strong> et al.</p>
-            <p class="pub-meta">NeurIPS 2026 在投 / CCF-A / 一作</p>
+            <p class="pub-meta">Preprint / 一作</p>
             <p>
               针对分组低比特 LLM 中激活稀疏理论可省算、实际难加速的落差，提出 group-aligned sparse decoding，结合校准式稀疏规划、在线残差选择与融合低比特算子，把稀疏性落到端到端 decode 吞吐提升。
             </p>
